@@ -7,7 +7,7 @@ body {
   background-color: rgba(236, 177, 100, 0.685);
   background-image: url('https://cdn4.vectorstock.com/i/1000x1000/15/73/city-road-urban-street-vector-23001573.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position-y: center;
   width: 50%;
   margin-left: 25%;
