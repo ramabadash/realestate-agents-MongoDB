@@ -5,7 +5,10 @@ const app = express();
 const cors = require('cors');
 require('dotenv').config();
 const mongoose = require('mongoose');
+// Routers
 const cities = require('./back-end/routers/cities');
+const agents = require('./back-end/routers/agents');
+
 const {
   errorHandlerMiddleware,
 } = require('./back-end/middlewares/errorHandler');
@@ -18,6 +21,7 @@ mongoose
   .then(() => console.log('DB Connected'))
   .catch((error) => console.log(error));
 
+// Cors
 app.use(
   cors({
     origin: '*',
@@ -34,6 +38,7 @@ app.get('/', (req, res) => {
 
 // Routers Use
 app.use('/cities', cities);
+app.use('/agents', agents);
 
 app.use(errorHandlerMiddleware);
 

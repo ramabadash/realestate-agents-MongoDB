@@ -7,3 +7,11 @@ exports.getAllCities = async (req, res, next) => {
     .then((citiesArrary) => res.json(citiesArrary))
     .catch((error) => next({ status: error.status, messege: error }));
 };
+
+// Get All cities
+exports.getAgentsByCity = async (req, res, next) => {
+  const { city } = req.params;
+  Agent.find({ city })
+    .then((agentsArray) => res.json(agentsArray))
+    .catch((error) => next({ status: error.status, messege: error }));
+};
