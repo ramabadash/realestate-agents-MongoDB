@@ -4,6 +4,7 @@ import './styles/index.css';
 const BASEURL = '';
 
 const citiesSelectBar = document.getElementById('cities');
+const agentCard = document.getElementById('agent-card');
 
 /* ---------- DOM RELATED ----------*/
 // General create element function
@@ -29,11 +30,14 @@ async function generateCitiesToDom() {
 }
 
 /* ---------- AGENTS LIST ----------*/
+// Produces a list of agent names from a particular city to the DOM based on API request information
 async function showAgentsList(event) {
   try {
     removeAgentsList();
+    removeAgentCard();
     const agentsArray = await getNamesByCity(event.target.value);
     const agentsList = createElement('select', '', 'agents-select');
+    agentsList.addEventListener('change', showAgentDetails);
     for (const agent of agentsArray) {
       const agentElem = createElement('option', agent.full_name, 'agent-name');
       agentElem.value = agent.full_name;
@@ -51,6 +55,38 @@ function removeAgentsList() {
   if (agentsList) agentsList.remove();
 }
 
+/* ---------- AGENT CARD ----------*/
+//
+async function showAgentDetails(event) {
+  try {
+    removeAgentCard();
+    const agentName = event.target.value;
+    const nameElem = createElement('label', agentName, 'agent-card-elem');
+    const idElem = createElement('label', ':מספר רישוי', 'agent-card-elem');
+    const cityElem = createElement(
+      'label',
+      `${citiesSelectBar.value} `,
+      'agent-card-elem'
+    );
+    // cityElem.addAttribute('contenteditable', true);
+    const closeBtnElem = createElement('button', 'X', 'agent-card-elem');
+    closeBtnElem.addEventListener('click', removeAgentCard);
+    // Appens elements
+    agentCard.appendChild(closeBtnElem);
+    agentCard.appendChild(nameElem);
+    agentCard.appendChild(idElem);
+    agentCard.appendChild(cityElem);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+function removeAgentCard() {
+  document.querySelectorAll('.agent-card-elem').forEach((element) => {
+    // remove card drom DOM
+    element.remove();
+  });
+}
 /* ---------- NETWORK ----------*/
 // API request for all cities names
 async function getAllCities() {

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Oxygen&display=swap');
 /* SECTIONS */
 
 body {
@@ -44,7 +44,7 @@ h3 {
 /* SELECTIONS */
 #cities,
 .agents-select {
-  font-family: 'Staatliches', cursive;
+  font-family: 'Heebo', sans-serif;
   font-size: 1em;
   width: 80%;
   height: 20%;
@@ -54,4 +54,24 @@ h3 {
   margin-top: 0.25em;
   background-color: rgba(25, 25, 112, 0.521);
   color: aliceblue;
+}
+
+/* AGENT CARD */
+#agent-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em;
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.5em;
+  color: maroon;
+  background-color: rgba(253, 245, 230, 0.747);
+}
+
+button {
+  font-size: 1em;
+  background-color: maroon;
+  color: aliceblue;
+  width: fit-content;
+  border-radius: 45%;
+  justify-self: center;
 }
