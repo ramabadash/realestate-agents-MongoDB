@@ -1,28 +1,15 @@
-# full-stack-template
+# Realestate agents with mongoDB -
 
 ---
 
-## Start -
+- Start a new Project, initiating GIT, NPM & Mongo DB.
+- Download a csv file of real estate agents from here
+- Design a Schema for Agent model
+- Write a job script that populates the database using the csv file (see example batch-insert.js)
+- Make 3 API endpoints (routes):
+  - GET /cities - will respond with a list of all cities
+  - GET /agents/?city=<city> - will respond with a list of all agents in that city
+  - PUT /agent/:id/edit - will update agent's city
+- BONUS implement a frontend application to consume this api.
 
-- **npm install** - on main dir
-- **npm run build- For webpack**
-- **npm run dev- For nodemon**
-
-## npm libraries -
-
-### Front
-
-- **webpack**
-- **es-lint**
-- **axios - by cnd**
-- **bable**
-
-### Back
-
-- **express**
-- **mongoose**
-- **cors**
-- **nodemon**
-- **dotenv**
-
-## Don't forget to add .env to .gitignire
+---
