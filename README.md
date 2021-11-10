@@ -4,13 +4,13 @@
 
 ### Front to End app with MongoDB
 
-- Back Built with: node js, express, nodemon, dotenv, csvtojson, mongoose
-- Front Built with : webpack, css, js, html, es-lint
+- Back Built with: node js, express, nodemon, dotenv, csvtojson, mongoose.
+- Front Built with : axios, webpack, css, js, html, es-lint
 
 ### Getting started
 
-- npm install
-- connect your mongoDB and run `node ./back-end/jobs" to inset data`
+- `npm install`
+- connect your mongoDB and run `node ./back-end/jobs` to inset data.
 - `npm ren dev`
 - `npm run build`
 
