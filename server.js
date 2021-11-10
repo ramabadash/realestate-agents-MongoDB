@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 // Routers
 const cities = require('./back-end/routers/cities');
 const agents = require('./back-end/routers/agents');
+const agent = require('./back-end/routers/agent');
 
 const {
   errorHandlerMiddleware,
@@ -39,6 +40,7 @@ app.get('/', (req, res) => {
 // Routers Use
 app.use('/cities', cities);
 app.use('/agents', agents);
+app.use('/agent', agent);
 
 app.use(errorHandlerMiddleware);
 
