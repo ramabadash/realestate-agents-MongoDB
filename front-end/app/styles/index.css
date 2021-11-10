@@ -1,3 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* SECTIONS */
+
 body {
-  background-color: aquamarine;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(236, 177, 100, 0.685);
+  background-image: url('https://cdn4.vectorstock.com/i/1000x1000/15/73/city-road-urban-street-vector-23001573.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+}
+
+header {
+  background-color: rgba(253, 245, 230, 0.699);
+}
+
+main {
+  background-color: rgba(253, 245, 230, 0.747);
+}
+/* HEADERS */
+h1 {
+  font-size: 3em;
+  color: maroon;
+}
+h2 {
+  font-size: 2em;
+  color: maroon;
+}
+h3 {
+  font-size: 1.5em;
+  color: maroon;
+}
+
+/* IMAGES */
+#boxes {
+  margin-top: 5em;
+  height: 15em;
+  position: relative;
+}
+/* SELECTIONS */
+#cities {
+  font-family: 'Staatliches', cursive;
+  font-size: 1em;
+  width: 80%;
+  height: 20%;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5em;
+  margin-top: 0.25em;
+  background-color: rgba(25, 25, 112, 0.521);
+  color: aliceblue;
 }
