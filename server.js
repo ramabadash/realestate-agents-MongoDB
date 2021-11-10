@@ -5,7 +5,7 @@ const app = express();
 const cors = require('cors');
 require('dotenv').config();
 const mongoose = require('mongoose');
-const apiRouter = require('./back-end/routers/api');
+const cities = require('./back-end/routers/cities');
 const {
   errorHandlerMiddleware,
 } = require('./back-end/middlewares/errorHandler');
@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 });
 
 // Routers Use
-app.use('/api', apiRouter);
+app.use('/cities', cities);
 
 app.use(errorHandlerMiddleware);
 
