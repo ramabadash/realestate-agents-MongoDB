@@ -42,7 +42,8 @@ h3 {
   position: relative;
 }
 /* SELECTIONS */
-#cities {
+#cities,
+.agents-select {
   font-family: 'Staatliches', cursive;
   font-size: 1em;
   width: 80%;
