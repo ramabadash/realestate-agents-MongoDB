@@ -4,11 +4,16 @@ const mongoose = require('mongoose');
 
 const Agent = require('../models/agent');
 
+const userName = '';
+const password = '';
 // DB connection
 mongoose
-  .connect(process.env.DATABASE, {
-    useNewUrlParser: true,
-  })
+  .connect(
+    `mongodb+srv://${userName}:${password}@cluster0.vfocj.mongodb.net/realestate-agents?retryWrites=true&w=majority`,
+    {
+      useNewUrlParser: true,
+    }
+  )
   .then(() => console.log('DB Connected'))
   .catch((error) => console.log(error));
 

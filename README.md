@@ -5,16 +5,24 @@
 ### Front to End app with MongoDB
 
 - Back Built with: node js, express, nodemon, dotenv, csvtojson, mongoose.
-- Front Built with : axios, webpack, css, js, html, es-lint
+- Front Built with : axios, webpack, babel, css, js, html, es-lint, "SweetAlert"
 
 ### Getting started
 
+- Clone this repo
 - `npm install`
-- connect your mongoDB and run `node ./back-end/jobs` to inset data.
-- `npm ren dev`
+- connect your mongoDB :
+  - Add `.env` file and add `DATABASE= <youre mongoDB connection link>`
+  - Put your user name and password in the right place in `./back-end/jobs/batch-insert`
+- run `node ./back-end/jobs` to inset data.
+- Delete your user name and password from `./back-end/jobs/batch-insert`
 - `npm run build`
+- `npm run dev`
+- Go to http://localhost:3000/ in your browser
 
 ---
+
+## Here is an example of my app!
 
 ![my app](./img/my_app.png)
 
