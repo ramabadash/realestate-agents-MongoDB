@@ -15,6 +15,19 @@ function createElement(tagName, textContent, className) {
   return newElem;
 }
 
+/* ---------- ERROR HANDLER ----------*/
+// Display Error massege
+function errorMessege(messege) {
+  swal({
+    title: `${messege}, please try again!`,
+    buttons: 'OK',
+    timer: 5000,
+    icon: 'error',
+    class: 'swal-button',
+    closeOnClickOutside: true,
+  });
+}
+
 /* ---------- CITY LIST ----------*/
 async function generateCitiesToDom() {
   try {
@@ -25,7 +38,7 @@ async function generateCitiesToDom() {
       citiesSelectBar.appendChild(cityElem);
     }
   } catch (error) {
-    console.log(error);
+    errorMessege(error.response.data.error);
   }
 }
 
@@ -46,7 +59,7 @@ async function showAgentsList(event) {
     const mainElem = document.getElementsByTagName('main')[0];
     mainElem.appendChild(agentsList);
   } catch (error) {
-    console.log(error);
+    errorMessege(error.response.data.error);
   }
 }
 
@@ -77,7 +90,7 @@ async function showAgentDetails(event) {
     agentCard.appendChild(idElem);
     agentCard.appendChild(cityElem);
   } catch (error) {
-    console.log(error);
+    errorMessege(error.response.data.error);
   }
 }
 
@@ -95,7 +108,7 @@ async function getAllCities() {
     const citiesArray = response.data;
     return citiesArray;
   } catch (error) {
-    console.log(error);
+    errorMessege(error.response.data.error);
   }
 }
 
@@ -105,7 +118,7 @@ async function getNamesByCity(city) {
     const response = await axios.get(`${BASEURL}/agents/?city=${city}`);
     return response.data;
   } catch (error) {
-    console.log(error);
+    errorMessege(error.response.data.error);
   }
 }
 
