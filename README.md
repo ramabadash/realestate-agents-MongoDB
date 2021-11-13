@@ -13,7 +13,7 @@
 - `npm install`
 - connect your mongoDB :
   - Add `.env` file and add `DATABASE= <youre mongoDB connection link>`
-  - Put your user name and password in the right place in `./back-end/jobs/batch-insert`
+  - Put your mongoDB connection link in the right place in `./back-end/jobs/batch-insert`
 - run `node ./back-end/jobs` to inset data.
 - Delete your user name and password from `./back-end/jobs/batch-insert`
 - `npm run build`
